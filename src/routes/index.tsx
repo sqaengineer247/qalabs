@@ -11,12 +11,12 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const TOP_FAQ = [...FAQS.General, ...FAQS["Service-Specific"], FAQS["Pricing & Engagement"][0]];
+const TOP_FAQ = [...FAQS.General, ...FAQS["Service-Specific"], FAQS["Pricing & Engagement"][0]!];
 
 function Home() {
   const [slide, setSlide] = useState(0);
   const navigate = useNavigate();
-  const visible = [0, 1, 2].map((i) => TESTIMONIALS[(slide + i) % TESTIMONIALS.length]);
+  const visible = [0, 1, 2].map((i) => TESTIMONIALS[(slide + i) % TESTIMONIALS.length]!);
 
   return (
     <>
