@@ -19,7 +19,7 @@ export const Route = createFileRoute("/testimonials")({
           <div className="aspect-video bg-ink"><iframe className="size-full" src="https://www.youtube.com/embed/PvqICbd2xuc" title="Quality Assurance Labs video" allowFullScreen /></div>
           <div className="flex flex-col justify-center gap-4 bg-cream p-8 ring-1 ring-black/5">
             <p className="font-display text-2xl font-semibold text-ink">Read verified reviews on Upwork.</p>
-            <a href={SOCIALS[0].href} target="_blank" rel="noreferrer" className="btn-ink w-fit">View Upwork profile</a>
+            <a href={SOCIALS[0]!.href} target="_blank" rel="noreferrer" className="btn-ink w-fit">View Upwork profile</a>
           </div>
         </div>
       </div></section>

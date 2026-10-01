@@ -49,7 +49,7 @@ export function Footer() {
         <div className="mt-10 flex flex-col gap-3 border-t-2 border-cream/10 pt-6 font-mono text-[11px] text-cream/40 sm:flex-row sm:justify-between">
           <span>© 2026 Quality Assurance Labs</span>
           <div className="flex flex-wrap gap-4">
-            {[["privacy-policy", "Privacy"], ["terms-of-service", "Terms"], ["cookie-policy", "Cookies"], ["accessibility-statement", "Accessibility"], ["security-compliance", "Security"]].map(([p, l]) => (
+            {([["privacy-policy", "Privacy"], ["terms-of-service", "Terms"], ["cookie-policy", "Cookies"], ["accessibility-statement", "Accessibility"], ["security-compliance", "Security"]] as const).map(([p, l]) => (
               <Link key={p} to="/$page" params={{ page: p }} className="hover:text-cream">{l}</Link>
             ))}
           </div>
